@@ -6,7 +6,7 @@ import com.intuit.karate.junit5.Karate.Test;
 public class UpdatePet {
     @Karate.Test
     Karate testSample(){
-        return Karate.run("classpath:Karate/request/UpdatePet.feature").relativeTo(getClass());
+        return Karate.run("classpath:Karate/request/2UpdatePet.feature").relativeTo(getClass());
     }
 }
 

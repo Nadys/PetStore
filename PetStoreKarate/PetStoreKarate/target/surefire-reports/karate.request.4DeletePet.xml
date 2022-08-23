@@ -1,43 +1,43 @@
-<testsuite failures="0" name="src/test/resources/Karate/request/FindPetById.feature" skipped="0" tests="3" time="2.143721">
-  <testcase classname="src.test.resources.Karate.request.FindPetById" name="Check the service GET method Pet by Id with invalid values" time="1.504489">
+<testsuite failures="0" name="karate/request/4DeletePet.feature" skipped="0" tests="3" time="0.853268">
+  <testcase classname="karate.request.4DeletePet" name="Check the service DELETE method for Id invalidate" time="0.265896">
     <system-out>* url url ................................................................. passed
 * def idPet = '888' ....................................................... passed
 Given path 'pet', idPet ................................................... passed
-When method GET ........................................................... passed
+When method Delete ........................................................ passed
+Then status 404 ........................................................... passed
+And match response == '' .................................................. passed</system-out>
+  </testcase>
+  <testcase classname="karate.request.4DeletePet" name="Check the service DELETE method for Id invalidate" time="0.29343">
+    <system-out>* url url ................................................................. passed
+* def idPet = '888' ....................................................... passed
+Given path 'pet', idPet ................................................... passed
+When method Delete ........................................................ passed
+Then status 404 ........................................................... passed
+And match response == '' .................................................. passed
+* url url ................................................................. passed
+* def idPet = 'gol' ....................................................... passed
+Given path 'pet', idPet ................................................... passed
+When method Delete ........................................................ passed
 Then status 404 ........................................................... passed
 And match response == {"code": '#number',"type": '#string',"message": '#string'} . passed</system-out>
   </testcase>
-  <testcase classname="src.test.resources.Karate.request.FindPetById" name="Check the service GET method Pet by Id with invalid values" time="0.320663">
+  <testcase classname="karate.request.4DeletePet" name="Check the service DELETE method for Id invalidate" time="0.293943">
     <system-out>* url url ................................................................. passed
 * def idPet = '888' ....................................................... passed
 Given path 'pet', idPet ................................................... passed
-When method GET ........................................................... passed
+When method Delete ........................................................ passed
 Then status 404 ........................................................... passed
-And match response == {"code": '#number',"type": '#string',"message": '#string'} . passed
+And match response == '' .................................................. passed
 * url url ................................................................. passed
-* def idPet = '@#$' ....................................................... passed
+* def idPet = 'gol' ....................................................... passed
 Given path 'pet', idPet ................................................... passed
-When method GET ........................................................... passed
-Then status 404 ........................................................... passed
-And match response == {"code": '#number',"type": '#string',"message": '#string'} . passed</system-out>
-  </testcase>
-  <testcase classname="src.test.resources.Karate.request.FindPetById" name="Check the service GET method Pet by Id with invalid values" time="0.318568">
-    <system-out>* url url ................................................................. passed
-* def idPet = '888' ....................................................... passed
-Given path 'pet', idPet ................................................... passed
-When method GET ........................................................... passed
-Then status 404 ........................................................... passed
-And match response == {"code": '#number',"type": '#string',"message": '#string'} . passed
-* url url ................................................................. passed
-* def idPet = '@#$' ....................................................... passed
-Given path 'pet', idPet ................................................... passed
-When method GET ........................................................... passed
+When method Delete ........................................................ passed
 Then status 404 ........................................................... passed
 And match response == {"code": '#number',"type": '#string',"message": '#string'} . passed
 * url url ................................................................. passed
 * def idPet = '' .......................................................... passed
 Given path 'pet', idPet ................................................... passed
-When method GET ........................................................... passed
+When method Delete ........................................................ passed
 Then status 405 ........................................................... passed
 And match response == &lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;apiResponse&gt;&lt;type&gt;unknown&lt;/type&gt;&lt;/apiResponse&gt; . passed</system-out>
   </testcase>

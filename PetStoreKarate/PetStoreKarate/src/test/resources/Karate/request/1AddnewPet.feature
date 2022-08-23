@@ -23,3 +23,17 @@ Feature:  Service Pet Post
     And assert response.tags.name == requestCreate.tags.name
     And assert response.status == requestCreate.status
 
+Scenario Outline: POST a pet with values incorrect at id
+
+    * def requestBody = {"id": <idBody>, "category": {"id": 22,"name": '#(nameCategory)'},"name": "luna*/_","photoUrls": ["string"],"tags": [{"id":7854,"name": '#(nameTags)'}],"status": "string"}
+
+    Given path 'pet'
+    And request requestBody
+    When method post
+    Then status <code>
+    And match response == <expected>
+
+    Examples:
+    | idBody     | code     | expected                                                   |
+    | "@$%^"     | 500      | {"code": "#number","type": "#string","message": "#string"} |
+    | "uno"      | 500      | {"code": "#number","type": "#string","message": "#string"} |

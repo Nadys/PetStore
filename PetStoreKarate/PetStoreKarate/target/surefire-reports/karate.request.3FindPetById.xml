@@ -1,5 +1,5 @@
-<testsuite failures="0" name="karate/request/FindPetById.feature" skipped="0" tests="3" time="0.920877">
-  <testcase classname="karate.request.FindPetById" name="Check the service GET method Pet by Id with invalid values" time="0.28284">
+<testsuite failures="0" name="karate/request/3FindPetById.feature" skipped="0" tests="3" time="0.821039">
+  <testcase classname="karate.request.3FindPetById" name="Check the service GET method Pet by Id with invalid values" time="0.267664">
     <system-out>* url url ................................................................. passed
 * def idPet = '888' ....................................................... passed
 Given path 'pet', idPet ................................................... passed
@@ -7,7 +7,7 @@ When method GET ........................................................... pass
 Then status 404 ........................................................... passed
 And match response == {"code": '#number',"type": '#string',"message": '#string'} . passed</system-out>
   </testcase>
-  <testcase classname="karate.request.FindPetById" name="Check the service GET method Pet by Id with invalid values" time="0.304605">
+  <testcase classname="karate.request.3FindPetById" name="Check the service GET method Pet by Id with invalid values" time="0.269592">
     <system-out>* url url ................................................................. passed
 * def idPet = '888' ....................................................... passed
 Given path 'pet', idPet ................................................... passed
@@ -21,7 +21,7 @@ When method GET ........................................................... pass
 Then status 404 ........................................................... passed
 And match response == {"code": '#number',"type": '#string',"message": '#string'} . passed</system-out>
   </testcase>
-  <testcase classname="karate.request.FindPetById" name="Check the service GET method Pet by Id with invalid values" time="0.333432">
+  <testcase classname="karate.request.3FindPetById" name="Check the service GET method Pet by Id with invalid values" time="0.283782">
     <system-out>* url url ................................................................. passed
 * def idPet = '888' ....................................................... passed
 Given path 'pet', idPet ................................................... passed
