@@ -1,0 +1,44 @@
+<testsuite failures="0" name="karate/request/DeletePet.feature" skipped="0" tests="3" time="0.942079">
+  <testcase classname="karate.request.DeletePet" name="Check the service DELETE method for Id invalidate" time="0.314358">
+    <system-out>* url url ................................................................. passed
+* def idPet = '888' ....................................................... passed
+Given path 'pet', idPet ................................................... passed
+When method Delete ........................................................ passed
+Then status 404 ........................................................... passed
+And match response == '' .................................................. passed</system-out>
+  </testcase>
+  <testcase classname="karate.request.DeletePet" name="Check the service DELETE method for Id invalidate" time="0.319342">
+    <system-out>* url url ................................................................. passed
+* def idPet = '888' ....................................................... passed
+Given path 'pet', idPet ................................................... passed
+When method Delete ........................................................ passed
+Then status 404 ........................................................... passed
+And match response == '' .................................................. passed
+* url url ................................................................. passed
+* def idPet = 'gol' ....................................................... passed
+Given path 'pet', idPet ................................................... passed
+When method Delete ........................................................ passed
+Then status 404 ........................................................... passed
+And match response == {"code": '#number',"type": '#string',"message": '#string'} . passed</system-out>
+  </testcase>
+  <testcase classname="karate.request.DeletePet" name="Check the service DELETE method for Id invalidate" time="0.308378">
+    <system-out>* url url ................................................................. passed
+* def idPet = '888' ....................................................... passed
+Given path 'pet', idPet ................................................... passed
+When method Delete ........................................................ passed
+Then status 404 ........................................................... passed
+And match response == '' .................................................. passed
+* url url ................................................................. passed
+* def idPet = 'gol' ....................................................... passed
+Given path 'pet', idPet ................................................... passed
+When method Delete ........................................................ passed
+Then status 404 ........................................................... passed
+And match response == {"code": '#number',"type": '#string',"message": '#string'} . passed
+* url url ................................................................. passed
+* def idPet = '' .......................................................... passed
+Given path 'pet', idPet ................................................... passed
+When method Delete ........................................................ passed
+Then status 405 ........................................................... passed
+And match response == &lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;apiResponse&gt;&lt;type&gt;unknown&lt;/type&gt;&lt;/apiResponse&gt; . passed</system-out>
+  </testcase>
+</testsuite>

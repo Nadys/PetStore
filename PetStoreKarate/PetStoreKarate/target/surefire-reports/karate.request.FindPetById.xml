@@ -1,0 +1,44 @@
+<testsuite failures="0" name="karate/request/FindPetById.feature" skipped="0" tests="3" time="0.920877">
+  <testcase classname="karate.request.FindPetById" name="Check the service GET method Pet by Id with invalid values" time="0.28284">
+    <system-out>* url url ................................................................. passed
+* def idPet = '888' ....................................................... passed
+Given path 'pet', idPet ................................................... passed
+When method GET ........................................................... passed
+Then status 404 ........................................................... passed
+And match response == {"code": '#number',"type": '#string',"message": '#string'} . passed</system-out>
+  </testcase>
+  <testcase classname="karate.request.FindPetById" name="Check the service GET method Pet by Id with invalid values" time="0.304605">
+    <system-out>* url url ................................................................. passed
+* def idPet = '888' ....................................................... passed
+Given path 'pet', idPet ................................................... passed
+When method GET ........................................................... passed
+Then status 404 ........................................................... passed
+And match response == {"code": '#number',"type": '#string',"message": '#string'} . passed
+* url url ................................................................. passed
+* def idPet = '@#$' ....................................................... passed
+Given path 'pet', idPet ................................................... passed
+When method GET ........................................................... passed
+Then status 404 ........................................................... passed
+And match response == {"code": '#number',"type": '#string',"message": '#string'} . passed</system-out>
+  </testcase>
+  <testcase classname="karate.request.FindPetById" name="Check the service GET method Pet by Id with invalid values" time="0.333432">
+    <system-out>* url url ................................................................. passed
+* def idPet = '888' ....................................................... passed
+Given path 'pet', idPet ................................................... passed
+When method GET ........................................................... passed
+Then status 404 ........................................................... passed
+And match response == {"code": '#number',"type": '#string',"message": '#string'} . passed
+* url url ................................................................. passed
+* def idPet = '@#$' ....................................................... passed
+Given path 'pet', idPet ................................................... passed
+When method GET ........................................................... passed
+Then status 404 ........................................................... passed
+And match response == {"code": '#number',"type": '#string',"message": '#string'} . passed
+* url url ................................................................. passed
+* def idPet = '' .......................................................... passed
+Given path 'pet', idPet ................................................... passed
+When method GET ........................................................... passed
+Then status 405 ........................................................... passed
+And match response == &lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;apiResponse&gt;&lt;type&gt;unknown&lt;/type&gt;&lt;/apiResponse&gt; . passed</system-out>
+  </testcase>
+</testsuite>
