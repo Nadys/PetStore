@@ -5,10 +5,10 @@ Feature:  Service Pet Post
 
   Background: consume service
     * url url
-
+  @ignoreScenario
   Scenario: Check the service POST method
-    * def responseAdd = read('classpath:Karate/request/responseAdd.json' )
-    * def requestCreate = read('classpath:Karate/request/requestBodyAdd.json' )
+    * def responseAdd = read('classpath:Karate/request/Pet/1AddnewPet/responseAdd.json' )
+    * def requestCreate = read('classpath:Karate/request/Pet/1AddnewPet/requestBodyAdd.json' )
 
     Given path 'pet'
     And request requestCreate

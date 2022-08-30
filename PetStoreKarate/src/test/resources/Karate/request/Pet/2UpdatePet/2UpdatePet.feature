@@ -5,10 +5,10 @@ Feature:  Service Update Pet PUT
 
   Background: consume service
     * url url
-
+  @ignoreScenario
   Scenario: Check the service PUT method
-    * def responseUpdate = read ('classpath:Karate/request/responseUpdate.json')
-    * def requestBodyUpdate = read ('classpath:Karate/request/requestBodyUpdate.json')
+    * def responseUpdate = read ('classpath:Karate/request/Pet/2UpdatePet/responseUpdate.json')
+    * def requestBodyUpdate = read ('classpath:Karate/request/Pet/2UpdatePet/requestBodyUpdate.json')
     Given path 'pet'
     And request requestBodyUpdate
     When method PUT

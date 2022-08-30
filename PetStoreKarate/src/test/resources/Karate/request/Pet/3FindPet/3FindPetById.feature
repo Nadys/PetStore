@@ -5,7 +5,7 @@ Feature:  Service Pet Find GET
 
   Background: consume service
     * url url
-
+  @ignoreScenario
   Scenario Outline: Check the service GET method Pet by Id with invalid values
     * def idPet = '<id>'
 
