@@ -1,0 +1,17 @@
+{
+  "dev": {
+    "url": "https://petstore.swagger.io/v2",
+    "id": 1,
+    "category": {
+      "id": 22,
+      "name": "perros"},
+    "name": "luna*/_",
+    "photoUrls": ["photos/manchas"],
+    "tags": [
+    {
+      "id":7854,
+      "name": "dog"}],
+      "status": "solid"
+  }
+}
+
